@@ -1,18 +1,16 @@
 //0.4: Nuevo diagrama de nota
 
-sequenceDiagram
-    participant browser
-    participant server
+secuenciaDiagrama
+    participant Usuario
+    participant Página Principal Notes https://studies.cs.helsinki.fi/exampleapp/notes
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
-    activate server
-    server-->>browser: HTML document
-    deactivate server
-
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
-    activate server
-    server-->>browser: the css file
-    deactivate server
+    usuario->>página principal: El usuario accede a la página principal de publicación de posts.
+    usuario->>formulario: El usuario ve un formulario con un campo de entrada de texto (`input`) donde puede escribir el contenido de su post.
+    usuario->>Ingresa texto: El usuario ingresa su texto en el campo de entrada.
+    usuario->>Botón:  Al finalizar, el usuario hace clic en el botón **Enviar**.
+    usuario->>Proceso Exitoso: Después de un procesamiento exitoso, el post aparece en la lista de publicaciones visibles en la web..
+    
+   
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
     activate server
