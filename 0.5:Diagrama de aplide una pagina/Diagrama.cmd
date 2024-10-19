@@ -1,0 +1,1 @@
+0.5: Diagrama de aplicación de una sola página
